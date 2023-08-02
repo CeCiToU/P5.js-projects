@@ -2,6 +2,8 @@
 
 ## CURENT PROJECTS:
 
++ Darts Game => 70% done
+
 + Pixelator  => 80% done
   
   Image befor:
@@ -12,7 +14,6 @@
   
   ![](https://cdn.discordapp.com/attachments/908315949294301184/1136388206351364246/PixeledImage2.jpg)
 
-+ Darts Game => 70% done
 
 
 
