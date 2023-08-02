@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.js"></script>
+  <style>
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <button id="playButton">Play</button>
+  <button id="stopButton">Stop</button>
+  <br>
+  <label for="lowPassFilter">Low-Pass Filter  :</label>
+  <label for="filterType">Filter Type:</label>
+<select id="filterType">
+  <option value="lowpass">Low-pass</option>
+  <option value="highpass">High-pass</option>
+  <option value="bandpass">Band-pass</option>
+</select>
+  <input type="range" id="lowPassFilter" min="0" max="1" step="0.01" value="0" />
+  <br>
+  <label for="audioSource">Audio Source:</label>
+<select id="audioSource">
+  <option value="microphone">Microphone</option>
+  <option value="file">Pre-recorded Audio File</option>
+</select>
+  <br>
+  <label for="waveShaper">Wave Shaper Distortion:</label>
+  <input type="range" id="waveShaper" min="0" max="1" step="0.01" value="0" />
+  <br>
+  <label for="compressor">Dynamic Compressor:</label>
+  <input type="range" id="compressor" min="0" max="1" step="0.01" value="0" />
+  <br>
+  <label for="reverb">Reverb:</label>
+  <input type="range" id="reverb" min="0" max="1" step="0.01" value="0" />
+  <br>
+  <label for="masterVolume">Master Volume:</label>
+  <input type="range" id="masterVolume" min="0" max="1" step="0.01" value="0.5" />
+  <br>
+  <button id="recordButton">Record</button>
+  <canvas id="visualizer"></canvas>
+  <script src="sketch.js"></script>
+</body>
+</html>
