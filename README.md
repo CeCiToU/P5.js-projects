@@ -25,7 +25,7 @@ When you are ready with this steps you have to start the program from the play b
 
 After clicking on the image hold the left arrow for 1-2 sec. If nothing hapens press and hold for a bit more.  (If you press and hold for long enough you will see dots in every pixel).
 
-***WARNING*** If notification like this is shown do not worry:
+***WARNING*** If notification like this is shown do not worry (it just will take more time to convert the image):
 
 ![](https://cdn.discordapp.com/attachments/908315949294301184/1146517646989344959/image.png)
 
@@ -46,9 +46,12 @@ Image befor:
 ![](https://cdn.discordapp.com/attachments/908315949294301184/1146521835601666098/Sunset.jpg)
 
   Image after:
-  
+
+  Took 20 minutes!
   ![](https://cdn.discordapp.com/attachments/908315949294301184/1136388206351364246/PixeledImage2.jpg)
 
+
+Took 50 minutes!
 ![](https://dragon.online-convert.com/download-file/15ea4c3b-87f9-4b38-b5f5-5ab6c165d8aa/6ea6122a-e3f3-4f9d-bf9b-8d1fe27a11d9?qr=true)
 
 
