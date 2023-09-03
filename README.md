@@ -63,7 +63,7 @@ Took 50 minutes!
 
 ## CURENT PROJECTS:
 
-Waveform visualizer 0% done
+Waveform visualizer 40% done
   
 ## NOT COMPLETED PROJECTS:
 
