@@ -16,11 +16,11 @@ function setup() {
 }
 
 function draw() {
-  if(gameRunning){
-  background(0);
-  drawDartTarget(width / 2, height / 2, diameter, numCircles);
-  drawDart();
-  drawBulletHoles();
+  if (gameRunning) {
+    background(0);
+    drawDartTarget(width / 2, height / 2, diameter, numCircles);
+    drawDart();
+    drawBulletHoles();
   }
 }
 
@@ -54,77 +54,73 @@ function drawBulletHoles() {
 }
 
 function mouseClicked() {
-  if(gameRunning){
-  if (dist(mouseX, mouseY, width / 2, height / 2) <= diameter / 2) {
-    if(randomness()){
-    shoot(0);
-    }
-  else {
-    shoot(50);
+  if (gameRunning) {
+    if (dist(mouseX, mouseY, width / 2, height / 2) <= diameter / 2) {
+      if (randomness()) {
+        shoot(0);
+      } else {
+        shoot(50);
       }
     }
   }
 }
 
-function shoot(r){
+function shoot(r) {
   this.r = r;
-    
-    // If the click is inside the dartboard
-  
-    //Newbie mode
-    //dartX = mouseX;
-    //dartY = mouseY;  
-  
-    //Easy mode
-    //dartX = mouseX + random(r);
-    //dartY = mouseY + random(r);
-    
-    //Hard mode
-    dartX = mouseX - 15 + random(30) + random(r);
-    dartY = mouseY - 15 + random(30) + random(r);
-  
-    //Expert
-    //dartX = mouseX - 25 + random(50) + random(r);
-    //dartY = mouseY - 25 + random(50) + random(r);
 
-    // Check if the dart hit the dartboard
-    let distanceToCenter = dist(dartX, dartY, width / 2, height / 2);
-    if (distanceToCenter <= (diameter / 2) - 2) {
-      // If the dart hit the dartboard, record the bullet hole position
-      bulletHoles.push({ x: dartX, y: dartY });
-      }
-  
-      currentHit = calculateCircleIndex(dartX, dartY, diameter, numCircles)
+  // If the click is inside the dartboard
+
+  //Newbie mode
+  //dartX = mouseX;
+  //dartY = mouseY;
+
+  //Easy mode
+  //dartX = mouseX + random(r);
+  //dartY = mouseY + random(r);
+
+  //Hard mode
+  dartX = mouseX - 15 + random(30) + random(r);
+  dartY = mouseY - 15 + random(30) + random(r);
+
+  //Expert
+  //dartX = mouseX - 25 + random(50) + random(r);
+  //dartY = mouseY - 25 + random(50) + random(r);
+
+  // Check if the dart hit the dartboard
+  let distanceToCenter = dist(dartX, dartY, width / 2, height / 2);
+  if (distanceToCenter <= diameter / 2 - 2) {
+    // If the dart hit the dartboard, record the bullet hole position
+    bulletHoles.push({ x: dartX, y: dartY });
+  }
+
+  currentHit = calculateCircleIndex(dartX, dartY, diameter, numCircles);
 }
 
-function getColor(x, y){
+function getColor(x, y) {
   this.x = x;
   this.y = y;
   let colors = get(x, y);
-  
-  if(colors[0] == 255 && colors[1] == 0) {
+
+  if (colors[0] == 255 && colors[1] == 0) {
     return "r";
-  }
-  else if(colors[0] == 255 && colors[1] == 255){
+  } else if (colors[0] == 255 && colors[1] == 255) {
     return "w";
   }
-  
-  return "NaN"
+
+  return "NaN";
 }
 
-function randomness(){
+function randomness() {
   let ran = random(101);
   //console.log(ran);
-  if(ran < 85){
+  if (ran < 85) {
     return true;
-  }
-  else {
+  } else {
     return false;
   }
 }
 
 function calculateCircleIndex(dartX, dartY, diameter, numCircles) {
-  
   let circleSizeStep = diameter / numCircles / 2;
   let distanceToCenter = round(dist(dartX, dartY, width / 2, height / 2));
   let circleIndex = floor(distanceToCenter / circleSizeStep, 0);
@@ -132,42 +128,45 @@ function calculateCircleIndex(dartX, dartY, diameter, numCircles) {
   if (circleIndex >= numCircles) {
     circleIndex = numCircles - 1;
   }
-  
-  circleIndex = constrain(circleIndex, 0, numCircles - 1); 
-  let clr = getColor(dartX,dartY);
-    
-  if(clr == "r" || clr == "w"){
-            gamesList.push({ x: round(dartX), y: round(dartY), result: clr === 'r'  ? "r, " + (circleIndex + 1): 'w, ' + (circleIndex +1)});
-  return circleIndex;
-    
+
+  circleIndex = constrain(circleIndex, 0, numCircles - 1);
+  let clr = getColor(dartX, dartY);
+
+  if (clr == "r" || clr == "w") {
+    gamesList.push({
+      x: round(dartX),
+      y: round(dartY),
+      result:
+        clr === "r" ? "r, " + (circleIndex + 1) : "w, " + (circleIndex + 1),
+    });
+    return circleIndex;
   }
 }
 
 function startGame() {
-gameRunning = true;
+  gameRunning = true;
 }
 
 function stopGame() {
-gameRunning = false;
+  gameRunning = false;
 }
 
-function clearDarts(){
+function clearDarts() {
   bulletHoles = [];
   fill(0);
   noStroke();
-  rect(width / 5, height / 4, width - width / 3, height/ 2);
+  rect(width / 5, height / 4, width - width / 3, height / 2);
   console.log("cleared");
   drawDartTarget(width / 2, height / 2, diameter, numCircles);
-  
 }
 
 function showGames() {
-  let gameInfo = '';
+  let gameInfo = "";
   for (let i = 0; i < gamesList.length; i++) {
     let { x, y, result } = gamesList[i];
     gameInfo += `Throw ${i + 1}: X=${x}, Y=${y}, Result=${result}\n`;
   }
-  alert(gameInfo || 'No games recorded yet!');
+  alert(gameInfo || "No games recorded yet!");
 }
 
 function game301() {
@@ -186,12 +185,11 @@ function game301() {
   }
 
   function checkWinCondition() {
-    
-    if (!gameEnded && currentPlayer.points == 0) { 
+    if (!gameEnded && currentPlayer.points == 0) {
       fill(0);
-      rect(0,0, width, height);
+      rect(0, 0, width, height);
       textSize(32);
-      fill (126);
+      fill(126);
       stroke(126);
       strokeWeight(2);
       let str = `Player ${currentPlayer === player1 ? 1 : 2} WON`;
@@ -213,7 +211,8 @@ function game301() {
   }
 
   mouseClicked = function () {
-    if (gameRunning && remainingThrows > 0 && !gameEnded) { // Check if the game is running, there are remaining throws, and the game hasn't ended
+    if (gameRunning && remainingThrows > 0 && !gameEnded) {
+      // Check if the game is running, there are remaining throws, and the game hasn't ended
       if (dist(mouseX, mouseY, width / 2, height / 2) <= diameter / 2) {
         if (randomness()) {
           shoot(0);
@@ -264,9 +263,7 @@ function gameCountUp() {
   let currentPlayer = player1;
   let remainingThrows = 3;
   let gameEnded = false;
-  
-  
-  
+
   function nextTurn() {
     remainingThrows = 3;
     currentPlayer = currentPlayer === player1 ? player2 : player1;
@@ -274,14 +271,13 @@ function gameCountUp() {
     currentHit = 6;
     redraw(); // Redraw the canvas to clear the darts
   }
-  
-  function checkWinCondition() {
 
-  if (!gameEnded && currentPlayer.points == 300) { 
+  function checkWinCondition() {
+    if (!gameEnded && currentPlayer.points >= 300) {
       fill(0);
-      rect(0,0, width, height);
+      rect(0, 0, width, height);
       textSize(32);
-      fill (126);
+      fill(126);
       stroke(126);
       strokeWeight(2);
       let str = `Player ${currentPlayer === player1 ? 1 : 2} WON`;
@@ -290,7 +286,7 @@ function gameCountUp() {
       gameRunning = false;
     }
   }
-  
+
   function drawScores() {
     //console.log("Scores drawn")
     textSize(16);
@@ -299,13 +295,9 @@ function gameCountUp() {
     text(`Player 2 Score: ${player2.points}`, 10, 40);
   }
 
-  function drawDartsRemaining() {
-    textSize(16);
-    text(`Darts Remaining: ${remainingThrows}`, 10, 60);
-  }
-  
   mouseClicked = function () {
-    if (gameRunning && remainingThrows > 0 && !gameEnded) { // Check if the game is running, there are remaining throws, and the game hasn't ended
+    if (gameRunning && remainingThrows > 0 && !gameEnded) {
+      // Check if the game is running, there are remaining throws, and the game hasn't ended
       if (dist(mouseX, mouseY, width / 2, height / 2) <= diameter / 2) {
         if (randomness()) {
           shoot(0);
@@ -315,23 +307,24 @@ function gameCountUp() {
 
         remainingThrows--;
         let currentPts = (currentHit - 6) * -5;
-
-        if (remainingThrows === 2) {
+        if (currentPts > 0) {
+          if (remainingThrows === 2) {
             currentPlayer.AddPoints(currentPts);
             checkWinCondition();
-        } else if (remainingThrows === 1) {
+          } else if (remainingThrows === 1) {
             currentPlayer.AddPoints(currentPts);
             checkWinCondition();
-          
-        } else if (remainingThrows === 0) {
+          } else if (remainingThrows === 0) {
             currentPlayer.AddPoints(currentPts);
             checkWinCondition();
           }
-          nextTurn();
+        }
+                  nextTurn();
+
       }
     }
   };
-  
+
   draw = function () {
     if (gameRunning) {
       background(0);
@@ -340,12 +333,6 @@ function gameCountUp() {
       drawScores();
       drawBulletHoles();
       checkWinCondition(); // Check for a winner on each frame
-      drawDartsRemaining();
     }
   };
-  
 }
-
-
-
-
