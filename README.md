@@ -99,6 +99,30 @@ Game Count-Up rules:
 * Every player has to reach over 300 points to win;
 * The game can be restarted by clicking 'Game Count-Up' button (starts a new game).
 
+Image of the result: 
+
+![](https://cdn.discordapp.com/attachments/908315949294301184/1148277389797904424/image.png)
+
+---
 
 ### Waveform visualizer instructions:
 
+Once you load the program in the web editor, you have to upload your image.
+
+You can make it like in this video (https://www.youtube.com/watch?embeds_referring_euri=https%3A%2F%2Fwww.google.com%2F&source_ve_path=Mjg2NjQsMTY0NTAz&feature=emb_share&v=rO6M5hj0V-o) (2:02 min).
+
+After you are done with uploading your files to the program you have to change the 'songString' and the 'imageString'. You have to simply put the name of the song and image.
+
+Then you can change the 'alphFade'. It will change the brightness of the canvas and the pulsing of the brightness from the music.
+
+The next thing is the 'amplitude'. It will change the shaking of the image. Lower value equals more shaking.
+
+The 'blurValue' is for the image. It blurs just the image.
+
+The next two 'minWave' and 'maxWave' are for the minimum and maximum of the radius of the pulsing circle.
+
+Last two things you can change are depending on your image. For best experience you can change the size of the canvas to be the same proportions as the size of the image.
+
+Image of the result:  Enter Shikari - It Hurts
+
+![](https://cdn.discordapp.com/attachments/908315949294301184/1148277239390146642/image.png)
