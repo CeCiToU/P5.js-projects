@@ -72,3 +72,33 @@ Image befor:
 Took 50 minutes!
 ![](https://cdn.discordapp.com/attachments/908315949294301184/1148253429022609439/Screenshot_2023-09-04_164854.jpg)
 
+----
+
+### Darts instructions:
+
+You should not touch anything in the code if you don't know what you are doing.
+Once you load the code and start the program you have to press the 'Start' button.
+
+In this state you can shoot endlessly on the board and simply clear the shots from the 'Clear Darts' button.
+
+'Stop' button can be used whenever you want to stop or pause a game
+
+'List of Throws' button shows every single shot that has landed on the darts.
+The user can then choose a game ('Game 301' or 'Game Count-Up').
+
+Game 301 rules:
+* The game is being played from two players;
+* Every player has three shots (shot counts if it lands on the darts);
+* Every player has to lower the 301 points to 0 points;
+* If you have less points left than you soccered you lost one shot;
+* The game can be restarted by clicking 'Game 301' button (starts a new game).
+
+Game Count-Up rules:
+* The game is being played from two players;
+* Every player has three shots;
+* Every player has to reach over 300 points to win;
+* The game can be restarted by clicking 'Game Count-Up' button (starts a new game).
+
+
+### Waveform visualizer instructions:
+
