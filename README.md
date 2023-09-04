@@ -32,11 +32,11 @@ Once you load the program in the web editor, you have to upload your image.
 You can make it like in this video 
 (https://www.youtube.com/watch?embeds_referring_euri=https%3A%2F%2Fwww.google.com%2F&source_ve_path=Mjg2NjQsMTY0NTAz&feature=emb_share&v=rO6M5hj0V-o) (2:02 min).
 
- after that you have to enter the name  of the image in the sketch.js file. The string is put in the '' of the imgString. 
+After that you have to enter the name  of the image in the sketch.js file. The string is put in the '' of the imgString. 
 
 For example if the image is called 'ExampleImage.jpg' it would look like this let imgString = 'ExampleImage.jpg'.
 
-after that you can change the size of the canva. The width, the height and the resizer ( the resizer is being added to the width and height af the canvas).
+After that you can change the size of the canva. The width, the height and the resizer ( the resizer is being added to the width and height af the canvas).
 You can also change the size of the pixels (bigger size => poorer quality; smaller size => better quality).
 
 When you are ready with this steps you have to start the program from the play button on the top of the page. The image will be shown on the screen. After that you have to click once on the image (so the program can know you want to work with the image). 
@@ -55,7 +55,7 @@ after the program is ready you should be hving the final result.
 
 You can download your image with pressing "s".
 
-***WARNING*** If the image is small you won't get the best result. The minimum size should be 
+***WARNING*** If the image is small you won't get the best result.
 
 Image befor:
 
