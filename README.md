@@ -126,3 +126,26 @@ Last two things you can change are depending on your image. For best experience 
 Image of the result:  Enter Shikari - It Hurts
 
 ![](https://cdn.discordapp.com/attachments/908315949294301184/1148277239390146642/image.png)
+
+---
+
+### Mandelbrot set instructions: 
+
+You have to simply upload the file in your web editor.
+
+After that you can change the values of the bounds. Higher value leads to higher quality (when zoomed in)
+
+The next value is for the number of iterations that are made. Higher value leads to sharper result.
+
+The scale is initial zoom level for the Mandelbrot set.
+
+The last two parameters determine the position of the Mandelbrot set will be drawn on the canvas.
+
+Once you are ready with the values you can start the program. 
+
+You must have see this on your screen: 
+![](https://cdn.discordapp.com/attachments/908315949294301184/1149429360038789230/image.png)
+
+The user can zoom in with 'i' key and zoom out with 'o' key. The field of view can be moved to left, right, up and down with correspondent: left arrow, right arrow, up arrow and down arrow.
+
+(Theoretically you can zoom to infinity)
