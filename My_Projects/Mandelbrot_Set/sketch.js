@@ -2,8 +2,8 @@
 // Check my github page https://github.com/CeCiToU/P5.js-projects for instructions (the README.md file)
 
 let bounds = 2; // Higher number will make the Mandelbrot set appear more detailed
-let iterator = 40 // Higher iterations make the Mandelbrot set appear sharper.
-let scale = 2; // Initial zoom level for the Mandelbrot set.
+let iterator = 50 // Higher iterations make the Mandelbrot set appear sharper.
+let scale = 1; // Initial zoom level for the Mandelbrot set.
 
 let cenX = 0; // Where the Mandelbrot set will be drawn on the X axis
 let cenY = 0; // Where the Mandelbrot set will be drawn on the Y axis
@@ -88,7 +88,7 @@ function drawBrot() {
         set(
           x,
           y,
-          color(150 + 200 - ((pow(result.i / 50, 0.5) * 200) % 255), 80, 100)
+          color(130 + 170 - ((pow(result.i / 50, 0.5) * 200) % 255), 80, 100)
         );
       } else {
         set(x, y, color(50));
