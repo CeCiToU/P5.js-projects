@@ -2,7 +2,7 @@
 
 ## CURENT PROJECTS:
 
-Interactive Solar System. Progress - 0%
+Interactive Solar System. Progress - 30%
 
 Maze Generator. Progress - 0%
 
