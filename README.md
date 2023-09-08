@@ -2,8 +2,12 @@
 
 ## CURENT PROJECTS:
 
-Everything is done by now :)
-  
+Interactive Solar System. Progress - 0%
+
+Maze Generator. Progress - 0%
+
+Firework animation - 0%
+
 ## NOT COMPLETED PROJECTS:
 
 + Tic_Tac_Toe is not done !!!
