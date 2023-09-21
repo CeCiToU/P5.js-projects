@@ -5,6 +5,7 @@
 Interactive Solar System. Progress - 80%
 
 ![](https://cdn.discordapp.com/attachments/908315949294301184/1154559423449137213/image.png)
+
 Maze Generator. Progress - 0%
 
 Firework animation - 0%
