@@ -2,9 +2,9 @@
 
 ## CURENT PROJECTS:
 
-Interactive Solar System. Progress - 98%
+Interactive Solar System. Progress - 80%
 
-![](https://cdn.discordapp.com/attachments/908315949294301184/1155236716559466536/image.png)
+![](https://cdn.discordapp.com/attachments/907924176004841473/1155572951802978424/image.png)
 
 Maze Generator. Progress - 0%
 
