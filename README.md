@@ -4,7 +4,7 @@
 
 Interactive Solar System. Progress - 75%
 
-![](https://cdn.discordapp.com/attachments/907924176004841473/1157349837709254717/image.png?ex=65184987&is=6516f807&hm=c56808eb48c6a916476701903e032ff607aeb929af889b175421a18f9b7f0ad0&)
+![](https://cdn.discordapp.com/attachments/907924176004841473/1157352508629467266/image.png?ex=65184c04&is=6516fa84&hm=79bea787dd1db21ea941b2451b583e8670a6d9b46da43a16ec1e24fe7c945e85&)
 
 Maze Generator. Progress - 0%
 
