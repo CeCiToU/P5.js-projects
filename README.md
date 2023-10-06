@@ -2,10 +2,6 @@
 
 ## CURENT PROJECTS:
 
-Interactive Solar System. Progress - 75%
-
-![](https://cdn.discordapp.com/attachments/907924176004841473/1157352508629467266/image.png?ex=65184c04&is=6516fa84&hm=79bea787dd1db21ea941b2451b583e8670a6d9b46da43a16ec1e24fe7c945e85&)
-
 Maze Generator. Progress - 0%
 
 Firework animation - 0%
@@ -23,6 +19,33 @@ There aren't any broken or not working projects :)
 --------
 
 ## Instructions for completed projects
+
+### Interactive solar system instructions:
+
+***If you want to use the ISS use this link: r.notohost.com/solar-system***
+
+The solar system folder contains all files you need to start the program.
+
+After you load everything  in the p5.js web editor you will have to just make the screen zoom comfortable for you and start the program.
+
+You will see this on the screen:
+
+![](https://cdn.discordapp.com/attachments/908315949294301184/1159909582391492648/image.png?ex=6532bcfa&is=652047fa&hm=17db02407ebc9f55e063c8497cb73ac4425607b928f6d843efbb7cd8077f10c6&)
+
+Sliders:
+* The 'X position' slider rotates the camera view over the X axes;
+* The 'Y position' slider rotates the camera view over the Y axes;
+* The 'Z position' slider rotates the camera view over the Z axes;
+* The 'Center X' slider rotates the X axes;
+* The 'Center Y' slider rotates the Y axes;
+* The 'Center Z' slider rotates the Z axes;
+* The 'Orbit speed' slider changes the speed of the planets.
+
+Buttons:
+* The 'Reset' button after every slider only resets this current slider to its default value;
+* The 'Pause/Play' button can pause the simulation or start the simulation.
+
+--------
 
 ### Pixelator instructions:
 
