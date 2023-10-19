@@ -1,58 +1,79 @@
+let nailCount = 100; // Number of nails
+
 let img;
 let canvasWidth = window.innerWidth;
 let canvasHeight = window.innerHeight;
 let radius;
-let nailCount = 100; // Number of nails
 
 let nails = [nailCount];
 let threads = [nailCount];
 
 function preload(){
+  // Loads in the variable
 img = loadImage("round.png");
 }
 
 function setup() {
+  // Creates canvas
   createCanvas(canvasWidth, canvasHeight);
   
+  // Displays image on the canvas
   background(0);
   imageMode(CENTER);
   image(img, canvasWidth / 2, canvasHeight / 2);
 
+  // Converts the image in black and white (gray scale)
   GenerateGrayScale();
+  // Generates nails and draws them on the canva
   GenerateNails();
+  // Generates threads between the nails
   GenerateThreads();
 
 }
 
 function draw() {
+  // Draws threads on the canvas
   DrawThreads();
 }
 
 function DrawThreads(){
   for(let i = 0; i < nailCount; i++){
+    // Coordinates of the head nail
     let startX = threads[i].startNail.x;
     let startY = threads[i].startNail.y;
+
+    // Coordinates of the tail nail
     let endX = threads[i].endNail.x;
     let endY = threads[i].endNail.y;
 
+    // Thread line
     line(startX, startY, endX, endY);
   }
+}
+
+function OrderThreads(){
+
+  // Order: starts from threads[0] and where it ends takes a thread that starts where this end and so on till
+  // there isn't any that starts where the previous ends. Then we pick one random that hasn't been ordered yet till all are sorted
+
 }
 
 function GenerateThreads(){
   for(let i = 0; i < nailCount; i++){
     let highestScoreThread = new Thread(nails[0], nails[1]);    
-    //console.log(highestScoreThread.threadScore);
     for(let j = 0; j < nailCount; j++){
       if(j <= i - 10 || j >= i + 10){
         let currentThread = new Thread(nails[i], nails[j]);
         currentThread.CalculateThreadScore(currentThread);
+        //console.log(currentThread.threadScore);
         if(currentThread.threadScore > highestScoreThread.threadScore){
           highestScoreThread = currentThread;
         }
       }
     }
     threads[i] = highestScoreThread;
+    //console.log(highestScoreThread.threadScore);
+
   }
 }
 
