@@ -2,12 +2,12 @@ let img;
 let canvasWidth = window.innerWidth;
 let canvasHeight = window.innerHeight;
 let radius;
-let dotCount = 100; // Number of dots
+let nailCount = 100; // Number of nails
 
-let nails = [dotCount];
+let nails = [nailCount];
 
 function preload(){
-img = loadImage("TinyYeti.jpg");
+img = loadImage("round.png");
 }
 
 function setup() {
@@ -26,6 +26,10 @@ function draw() {
   
 }
 
+function GenerateStrings(){
+  
+}
+
 function GenerateNails(){
   
   let centerX = width / 2; // Center of the canvas
@@ -37,10 +41,10 @@ function GenerateNails(){
     radius = img.width / 2
   }
 
-  for (let i = 0; i < dotCount; i++) {
+  for (let i = 0; i < nailCount; i++) {
 
-    // Calculate the position of each dot around the circle
-    let angle = map(i, 0, dotCount, 0, TWO_PI);
+    // Calculate the position of each nail around the circle
+    let angle = map(i, 0, nailCount, 0, TWO_PI);
     let x = centerX + cos(angle) * radius;
     let y = centerY + sin(angle) * radius;
 
@@ -48,7 +52,7 @@ function GenerateNails(){
     let currentNail = new Nail(x, y);
     nails[i] = currentNail;
 
-    // Draw a dot at the calculated position
+    // Draw a nail at the calculated position
     ellipse(x, y, 10, 10);
   }
 }
