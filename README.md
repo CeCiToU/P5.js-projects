@@ -2,6 +2,8 @@
 
 ## CURENT PROJECTS:
 
+String / Thread art - 20%
+
 Maze Generator. Progress - 0%
 
 Firework animation - 0%
