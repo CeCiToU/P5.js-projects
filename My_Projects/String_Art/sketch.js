@@ -5,6 +5,7 @@ let radius;
 let nailCount = 100; // Number of nails
 
 let nails = [nailCount];
+let threads = [nailCount];
 
 function preload(){
 img = loadImage("round.png");
@@ -19,15 +20,40 @@ function setup() {
 
   GenerateGrayScale();
   GenerateNails();
+  GenerateThreads();
+
 }
 
 function draw() {
- 
-  
+  DrawThreads();
 }
 
-function GenerateStrings(){
-  
+function DrawThreads(){
+  for(let i = 0; i < nailCount; i++){
+    let startX = threads[i].startNail.x;
+    let startY = threads[i].startNail.y;
+    let endX = threads[i].endNail.x;
+    let endY = threads[i].endNail.y;
+
+    line(startX, startY, endX, endY);
+  }
+}
+
+function GenerateThreads(){
+  for(let i = 0; i < nailCount; i++){
+    let highestScoreThread = new Thread(nails[0], nails[1]);    
+    //console.log(highestScoreThread.threadScore);
+    for(let j = 0; j < nailCount; j++){
+      if(j <= i - 10 || j >= i + 10){
+        let currentThread = new Thread(nails[i], nails[j]);
+        currentThread.CalculateThreadScore(currentThread);
+        if(currentThread.threadScore > highestScoreThread.threadScore){
+          highestScoreThread = currentThread;
+        }
+      }
+    }
+    threads[i] = highestScoreThread;
+  }
 }
 
 function GenerateNails(){
