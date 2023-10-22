@@ -65,7 +65,7 @@ function GenerateThreads(){
     for(let j = 0; j < nailCount; j++){
       if(j <= i - 10 || j >= i + 10){
         let currentThread = new Thread(nails[i], nails[j]);
-        let currentThreadScore = CalculateThreadScore(currentThread)
+        let currentThreadScore = currentThread.CalculateThreadScore(currentThread)
         currentThread.threadScore = currentThreadScore;
         //console.log(currentThread.threadScore);
         if(currentThread.threadScore > highestScoreThread.threadScore){
