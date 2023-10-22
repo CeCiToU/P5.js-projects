@@ -1,3 +1,5 @@
+// TO DO:  Move the image on the side and draw the resukt next to it.
+
 let nailCount = 100; // Number of nails
 
 let img;
@@ -18,7 +20,7 @@ function setup() {
   createCanvas(canvasWidth, canvasHeight);
   
   // Displays image on the canvas
-  background(0);
+  background(100);
   imageMode(CENTER);
   image(img, canvasWidth / 2, canvasHeight / 2);
 

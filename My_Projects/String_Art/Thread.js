@@ -39,7 +39,9 @@ class Thread {
             const y = lerp(startY, endY, i / numPoints);
     
             // Check if the pixel at (x, y) is black (you can define a threshold)
-            const pixelColor = get(int(x), int(y));
+            //const pixelColor = get(int(x), int(y));
+            var pixelColor = [random(0,255), random(0, 255), random(0, 255), random(0, 255)];
+
             const threshold = 100; // Adjust this threshold
             if (red(pixelColor) < threshold || green(pixelColor) < threshold || blue(pixelColor) < threshold) {
                 blackCount++;
