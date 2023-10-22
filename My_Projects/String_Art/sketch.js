@@ -27,7 +27,7 @@ function setup() {
   // Generates nails and draws them on the canva
   GenerateNails();
   // Generates threads between the nails
-  GenerateThreads();
+  threads = GenerateThreads();
 
 }
 
@@ -38,10 +38,10 @@ function draw() {
 
 function DrawThreads(){
   for(let i = 0; i < nailCount; i++){
+    // Extract the coordinates of the start and end nails
     // Coordinates of the head nail
     let startX = threads[i].startNail.x;
     let startY = threads[i].startNail.y;
-
     // Coordinates of the tail nail
     let endX = threads[i].endNail.x;
     let endY = threads[i].endNail.y;
@@ -59,22 +59,25 @@ function OrderThreads(){
 }
 
 function GenerateThreads(){
+  let scoredThreads = [nailCount];
   for(let i = 0; i < nailCount; i++){
     let highestScoreThread = new Thread(nails[0], nails[1]);    
     for(let j = 0; j < nailCount; j++){
       if(j <= i - 10 || j >= i + 10){
         let currentThread = new Thread(nails[i], nails[j]);
-        currentThread.CalculateThreadScore(currentThread);
+        let currentThreadScore = CalculateThreadScore(currentThread)
+        currentThread.threadScore = currentThreadScore;
         //console.log(currentThread.threadScore);
         if(currentThread.threadScore > highestScoreThread.threadScore){
           highestScoreThread = currentThread;
         }
       }
     }
-    threads[i] = highestScoreThread;
+    scoredThreads[i] = highestScoreThread;
     //console.log(highestScoreThread.threadScore);
 
   }
+  return scoredThreads;
 }
 
 function GenerateNails(){
