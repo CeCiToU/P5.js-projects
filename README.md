@@ -2,7 +2,7 @@
 
 ## CURENT PROJECTS:
 
-String / Thread art - 20%
+String / Thread art - 40%
 
 Maze Generator. Progress - 0%
 
