@@ -180,3 +180,4 @@ You must have see this on your screen:
 The user can zoom in with 'i' key and zoom out with 'o' key. The field of view can be moved to left, right, up and down with correspondent: left arrow, right arrow, up arrow and down arrow.
 
 (Theoretically you can zoom to infinity)
+---
